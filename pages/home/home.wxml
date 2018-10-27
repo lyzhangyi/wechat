@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='top'>
+      顶部
+  </view>
+  <view class='hot-cate-title'>
+      热门类别标题
+  </view>
+  <view class='advert-title'>
+      广告版块标题
+  </view>
+  <view class='advert'>
+      广告
+  </view>
+  <view class='hot-news-title'>
+      新闻版块标题
+  </view>
+  <view class='hot-news'>
+      新闻
+  </view>
+</view>
+
+

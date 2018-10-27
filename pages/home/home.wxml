@@ -1,0 +1,30 @@
+<!--index.wxml-->
+
+  <view class='top'>
+      <view class='location'>{{district}}</view>
+      <view class='search'>
+        <input class='in-search' placeholder='搜索' ></input>
+      </view>
+  </view>
+  <view class='hot-cate-title'>
+      热门类别标题
+  </view>
+  <swiper indicator-dots='{{indicatorDots}}' indicator-color='rgba(0,0,0,.3)' indicator-active-color='#cccccc' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' >
+    <block wx-for="">
+      <swiper-item>
+        <image src='{{imgUrls}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='advert-title'>
+      广告版块标题
+  </view>
+  <view class='advert'>
+      广告
+  </view>
+  <view class='hot-news-title'>
+      新闻版块标题
+  </view>
+  <view class='hot-news'>
+      新闻
+  </view>

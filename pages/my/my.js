@@ -7,11 +7,50 @@ Page({
     
   },
 
+  Recharge: function () {
+    var that = this
+    wx.showModal({
+      title: '消息',
+      content: '该功能尚未开放',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad() {
+    var self = this;
+    /**
+     * 获取用户信息
+     */
+    wx.getUserInfo({
+      openIdList: ['selfOpenId'],
+      lang: 'zh_CN',
+      success: function (res) {
+        self.setData({
+          thumb: res.userInfo.avatarUrl,
+          nickname: res.userInfo.nickName
+        })
+      }
+    })
+    //,
+
+      /**
+       * 发起请求获取订单列表信息
+       
+      wx.request({
+        url: '',
+        success(res) {
+          self.setData({
+            orders: res.data
+          })
+        }
+      })*/
   },
 
   /**
